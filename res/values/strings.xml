@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Android Archetype</string>
+    <string name="launch_sub">Launch Sub</string>
 </resources>
