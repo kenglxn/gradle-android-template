@@ -1,0 +1,41 @@
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+  dependencies {
+    classpath 'org.gradle.api.plugins:gradle-android-plugin:1.1.0'
+  }
+}
+apply plugin: 'android'
+repositories {
+  mavenCentral()
+}
+sourceSets {
+    main {
+        java {
+            srcDir 'src/java'
+        }
+        resources {
+            srcDir 'src/resources'
+        }
+    }
+}
+version = "x.y.z"
+androidSignAndAlign {
+  keyStore = "glxn.keystore"
+  keyAlias = "glxnkeys"
+  keyStorePassword = "karatedo"
+  keyAliasPassword = "karatedo"
+}
+processResources {
+  expand (project.properties)
+}
+task configureDebug << {
+  jar.classifier = "debug"
+}
+task configureRelease << {
+  proguard.enabled = true
+}
+androidEmulatorStart {
+    avdName = "AVD2.3.3"
+}
