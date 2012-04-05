@@ -1,4 +1,4 @@
-package net.glxn.proximus;
+package net.glxn.android;
 
 import android.os.Bundle;
 import android.util.Log;
