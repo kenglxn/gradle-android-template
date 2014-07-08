@@ -21,12 +21,6 @@ sourceSets {
     }
 }
 version = "x.y.z"
-androidSignAndAlign {
-  keyStore = "glxn.keystore"
-  keyAlias = "glxnkeys"
-  keyStorePassword = "karatedo"
-  keyAliasPassword = "karatedo"
-}
 processResources {
   expand (project.properties)
 }
